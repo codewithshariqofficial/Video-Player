@@ -1,51 +1,89 @@
 # Modern Custom Video Player
 
-A custom YouTube video player with a playlist, built with HTML, CSS, and JavaScript.
+A modern, custom YouTube video player with a playlist, built with pure HTML, CSS, and JavaScript. It replaces YouTube's default controls with a clean, responsive UI and adds handy features like playback speed, keyboard shortcuts, and auto-play next.
 
-## Features
+## ✨ Features
 
-- Custom controls (play/pause, volume, seek, fullscreen)
-- Playback speed (0.5x, 0.75x, 1x, 1.5x, 2x)
-- Volume mute/unmute with slider
-- Seek by clicking the progress bar
-- Auto-hide controls while playing
-- Playlist with thumbnail, title and channel
-- Auto-play next video when one ends
-- Keyboard shortcuts
-- Responsive design
+- 🎬 YouTube IFrame Player API integration
+- ▶️ Custom play/pause, seek, volume, and fullscreen controls
+- 🔊 Volume mute/unmute with slider
+- ⏩ Playback speed control (0.5x, 0.75x, 1x, 1.5x, 2x)
+- 🖱️ Click on the progress bar to seek
+- 🙈 Auto-hide controls while playing
+- 📋 Playlist with thumbnail, title, and channel name
+- ⏭️ Auto-play next video when one ends (and on error)
+- ⌨️ Keyboard shortcuts for quick control
+- 📱 Responsive design (16:9 aspect ratio)
+- 🎨 Dark, modern UI
 
-## Keyboard Shortcuts
+## ⌨️ Keyboard Shortcuts
 
 | Key | Action |
 | --- | --- |
 | Space | Play / Pause |
-| F | Fullscreen |
+| F | Toggle fullscreen |
 | M | Mute / Unmute |
 | N | Next video |
-| Arrow Right | Seek +5s |
-| Arrow Left | Seek -5s |
+| → | Seek forward 5s |
+| ← | Seek backward 5s |
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- JavaScript (Vanilla / ES6)
 - YouTube IFrame Player API
+- Font Awesome (CDN)
 
-## Files
+## 📁 Project Structure
 
-- `index.html` - Page structure
-- `style.css` - Styling
-- `script.js` - Player logic
-- `assets/subtitles.vtt` - Sample subtitles file
+```
+Video-Player/
+├── index.html          # Page structure
+├── style.css           # Styling
+├── script.js           # Player logic
+├── README.md           # Documentation
+├── LICENSE             # MIT License
+└── assets/
+    └── subtitles.vtt  # Sample subtitles file
+```
 
-## How to Run
+## 🚀 Getting Started
 
-1. Make sure you have an internet connection (uses YouTube IFrame API and Font Awesome).
+No build tools or dependencies are required.
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/codewithshariqofficial/Video-Player.git
+   cd Video-Player
+   ```
+
 2. Open `index.html` in any modern browser.
-3. No build step or dependencies required.
 
-## Notes
+   > An internet connection is required because the player uses the YouTube IFrame API and Font Awesome (CDN).
 
-- Videos are loaded from YouTube, so an internet connection is required.
-- The playlist is defined in `script.js` and can be edited to add your own YouTube video IDs.
+### Customizing the playlist
+
+The playlist is defined in `script.js`. Edit the `playlist` array to add your own YouTube video IDs:
+
+```js
+const playlist = [
+  { id: "VIDEO_ID", title: "Video Title", channel: "Channel Name" },
+];
+```
+
+## 🌐 Live Demo
+
+Not currently deployed. You can enable **GitHub Pages** (Settings → Pages → Deploy from `main` branch) to host it for free.
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+## 👤 Author
+
+**Code With Shariq Official**
+
+- GitHub: [@codewithshariqofficial](https://github.com/codewithshariqofficial)
+- Email: shariq.shahid.official@gmail.com
