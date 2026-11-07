@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Custom Video Player</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="video-container" id="video-container">
+            <!-- YouTube Player (created by the IFrame API) -->
+            <div id="youtube-player"></div>
+            <!-- Transparent overlay so clicks on the video toggle play/pause -->
+            <div class="video-click-overlay"></div>
+
+            <!-- Custom Controls -->
+            <div class="controls-overlay">
+                <div class="progress-area">
+                    <div class="progress-bar">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="controls-list">
+                    <div class="controls-left">
+                        <button class="play-pause" title="Play (space)"><i class="fas fa-play"></i></button>
+                        <div class="volume-container">
+                            <button class="volume-btn" title="Mute (m)"><i class="fas fa-volume-up"></i></button>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+                        </div>
+                        <div class="video-timer">
+                            <span class="current-time">0:00</span>
+                            <span class="separator"> / </span>
+                            <span class="duration">0:00</span>
+                        </div>
+                    </div>
+                    <div class="controls-right">
+                        <div class="playback-speed">
+                            <button class="speed-btn">1x</button>
+                            <ul class="speed-options">
+                                <li data-speed="2">2x</li>
+                                <li data-speed="1.5">1.5x</li>
+                                <li data-speed="1" class="active">Normal</li>
+                                <li data-speed="0.75">0.75x</li>
+                                <li data-speed="0.5">0.5x</li>
+                            </ul>
+                        </div>
+                        <button class="fullscreen-btn" title="Fullscreen (f)"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- YouTube Playlist -->
+        <div class="playlist">
+            <h3 class="playlist-title">Up Next</h3>
+            <ul class="playlist-list" id="playlist-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
